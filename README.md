@@ -35,3 +35,17 @@ cd dotnet-api-boilerplate
 dotnet restore
 dotnet build
 dotnet run --project src/API/API.csproj
+
+#To use this project:
+
+1. Clone the repository
+2. Update the connection string in `appsettings.json`
+3. Run database migrations:
+bash
+dotnet ef database update
+4. Run the application using the provided batch file:
+bash
+.\scripts\run-api.bat
+
+
+The API will be available at `http://localhost:5000` with Swagger documentation at `/swagger`.
